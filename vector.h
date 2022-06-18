@@ -176,6 +176,7 @@ namespace IceCola
 
         iterator insert(iterator pos, const T& x)
         {
+            assert(pos <= _finish);
             if (_finish == _endOfStorage)
             {
                 int sz = _endOfStorage - _start;
@@ -194,6 +195,7 @@ namespace IceCola
 
         iterator erase(iterator pos)
         {
+            assert(pos < _finish);
             iterator cur = pos + 1;
             while (cur != _finish)
             {
