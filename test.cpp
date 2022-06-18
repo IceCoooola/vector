@@ -27,5 +27,12 @@ int main()
 	{
 		std::cout << e << " ";
 	}
+	std::cout << std::endl;
+	v1.erase(v1.begin() + 3);
+	for (auto e : v1)
+	{
+		std::cout << e << " ";
+	}
+	std::cout << std::endl;
 	return 0;
 }
